@@ -88,8 +88,12 @@ test('bots can be filtered by role', () => {
   assert.doesNotMatch(r.stdout, /GPTBot /);
 });
 
+const read = (f) => fs.readFileSync(path.join(ROOT, 'docs', f), 'utf8').replace(/
+/g, '
+');
+
 test('committed docs are in sync with the data files', () => {
-  assert.equal(fs.readFileSync(path.join(ROOT, 'docs', 'MATRIX.md'), 'utf8'), renderMarkdown(), 'run npm run docs');
-  assert.equal(fs.readFileSync(path.join(ROOT, 'docs', 'ADS.md'), 'utf8'), renderAdsMarkdown(), 'run npm run docs');
-  assert.equal(fs.readFileSync(path.join(ROOT, 'docs', 'GA4-TEMPLATE.md'), 'utf8'), ga4TemplateMarkdown(), 'run npm run docs');
+  assert.equal(read('MATRIX.md'), renderMarkdown(), 'run npm run docs');
+  assert.equal(read('ADS.md'), renderAdsMarkdown(), 'run npm run docs');
+  assert.equal(read('GA4-TEMPLATE.md'), ga4TemplateMarkdown(), 'run npm run docs');
 });
