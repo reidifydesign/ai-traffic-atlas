@@ -167,5 +167,138 @@
     "published": "2026-08-20",
     "read": "2026-09-30",
     "kind": "secondary"
+  },
+  "openai-ads-principles": {
+    "title": "Our approach to advertising and expanding access to ChatGPT (OpenAI)",
+    "url": "https://openai.com/index/our-approach-to-advertising-and-expanding-access/",
+    "published": "2026-01-16",
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-testing-ads": {
+    "title": "Testing ads in ChatGPT (OpenAI, with dated updates)",
+    "url": "https://openai.com/index/testing-ads-in-chatgpt/",
+    "published": "2026-02-09",
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-new-ways-to-buy": {
+    "title": "New ways to buy ChatGPT ads (OpenAI)",
+    "url": "https://openai.com/index/new-ways-to-buy-chatgpt-ads/",
+    "published": "2026-05-05",
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-ads-europe": {
+    "title": "ChatGPT Ads expands across Europe (OpenAI, with an update dated 2026-08-31)",
+    "url": "https://openai.com/index/chatgpt-ads-expands-across-europe/",
+    "published": "2026-08-18",
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-ads-milestone": {
+    "title": "A milestone in expanding access to AI (OpenAI)",
+    "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/",
+    "published": "2026-08-31",
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-reimagining-ads": {
+    "title": "Reimagining advertising with AI (OpenAI)",
+    "url": "https://openai.com/index/reimagining-advertising-with-ai/",
+    "published": "2026-09-16",
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-ads-asia": {
+    "title": "ChatGPT Ads expands to Southeast Asia and Taiwan (OpenAI)",
+    "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan/",
+    "published": "2026-09-23",
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-ads-basics": {
+    "title": "Ads in ChatGPT: The Basics (OpenAI Help Center)",
+    "url": "https://help.openai.com/en/articles/20001207-ads-in-chatgpt-the-basics",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-ads-faq": {
+    "title": "Ads in ChatGPT (OpenAI Help Center FAQ)",
+    "url": "https://help.openai.com/en/articles/20001047-ads-in-chatgpt",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-ads-conversion": {
+    "title": "Conversion Measurement (OpenAI Help Center)",
+    "url": "https://help.openai.com/en/articles/20001409-conversion-measurement",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-ads-measure": {
+    "title": "Measure Results (OpenAI Help Center)",
+    "url": "https://help.openai.com/en/articles/20001214-measure-results",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-ads-availability": {
+    "title": "Ads Manager Availability (OpenAI Help Center)",
+    "url": "https://help.openai.com/en/articles/20001245-ads-manager-availability",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-ads-bulk-schema": {
+    "title": "Bulk Upload Campaign Schema Checklist (OpenAI Help Center)",
+    "url": "https://help.openai.com/en/articles/20001218-bulk-upload-campaign-schema-checklist",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-ads-mmp": {
+    "title": "Set up Mobile Measurement Partner Integrations (OpenAI Help Center)",
+    "url": "https://help.openai.com/en/articles/20001372-set-up-mobile-measurement-partner-integrations",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-ads-crawlers": {
+    "title": "Advertiser Guidance for Allowing OpenAI Web Crawlers (OpenAI Help Center)",
+    "url": "https://help.openai.com/en/articles/20001243-advertiser-guidance-for-allowing-openai-web-crawlers",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-sponsored-agents-help": {
+    "title": "Sponsored Agents in ChatGPT Ads (OpenAI Help Center)",
+    "url": "https://help.openai.com/en/articles/20001524-sponsored-agents-in-chatgpt-ads",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "bing-crawlers": {
+    "title": "Which Crawlers Does Bing Use? (Bing Webmaster Tools help)",
+    "url": "https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "ga4-traffic-source-dimensions": {
+    "title": "Traffic-source dimensions, manual tagging, and auto-tagging (Analytics Help)",
+    "url": "https://support.google.com/analytics/answer/11242870",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "ga4-api-schema": {
+    "title": "API dimensions and metrics (Google Analytics Data API schema)",
+    "url": "https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
   }
 }

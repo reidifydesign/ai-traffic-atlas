@@ -80,7 +80,7 @@ export function ga4Steps(extra = []) {
 4. Drag the new channel above Referral. GA4 evaluates channels top to bottom and stops at the first match.
 5. Save. The group applies to reports from the day it is created; it does not rewrite history.
 
-Why this when GA4 has a native AI Assistant channel: the native list is Google's and was not published in full on 2026-09-30, and Perplexity is not among the examples Google names. A listed-hosts channel shows you exactly what is in it. Compare the two in Traffic acquisition before you trust either.
+Why this when GA4 has a native AI Assistant channel: the native list is Google's and no full list was found on the Analytics Help pages read on 2026-09-30, and Perplexity is not among the examples Google names. A listed-hosts channel shows you exactly what is in it. Compare the two in Traffic acquisition before you trust either.
 
 Suspicious direct, in Explore (a method, not a measurement)
 1. Explore > Free form > Segments > New segment > Session segment.

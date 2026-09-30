@@ -50,9 +50,9 @@ Questions behind the columns:
 
 **Owner report** (partial, read 2026-09-30). Bing Webmaster Tools AI Performance (public preview since 2026-02-10): total citations, average cited pages per day, a sample of grounding queries, page-level citation counts and a trend. It counts citations, not rank, authority or position inside an answer. Sources: [bing-ai-performance].
 
-**Human clicks** (partial, read 2026-09-30). GA4's AI Assistant channel names Copilot. A third party says some Copilot traffic arrives through bing.com and looks like ordinary search. [[CONFIRM: no Microsoft page read on how Copilot clicks are referred.]] Sources: [ga4-channels], [measureu-regex].
+**Human clicks** (partial, read 2026-09-30). GA4's AI Assistant channel names Copilot. A third party says some Copilot traffic arrives through bing.com and looks like ordinary search. Microsoft's AI Performance announcement and its crawler help page, both read on this date, do not say how Copilot clicks are referred. [[CONFIRM: no Microsoft page read states the referrer of a Copilot click.]] Sources: [ga4-channels], [measureu-regex], [bing-ai-performance], [bing-crawlers].
 
-**Fetchers in logs** (unverified, read 2026-09-30). In one site's test, a Copilot fetch arrived as a plain Chrome browser and could not be told from a human. [[CONFIRM: Microsoft's own crawler documentation was not readable on the read date.]] Sources: [surfacedby-probe].
+**Fetchers in logs** (unverified, read 2026-09-30). Microsoft's crawler help page lists Bingbot, AdIdxBot, BingPreview, MicrosoftPreview and BingVideoPreview, and lists no separate Copilot user agent. In one site's test, a Copilot fetch arrived as a plain Chrome browser and could not be told from a human. [[CONFIRM: whether Copilot's live fetches use any of Microsoft's listed agents. The test covers one site and Microsoft's page does not say.]] Sources: [bing-crawlers], [surfacedby-probe].
 
 **Owner controls** (partial, read 2026-09-30). Bing says the report respects robots.txt and other supported content owner controls. The specific controls were not listed in the announcement. Sources: [bing-ai-performance].
 
@@ -60,7 +60,7 @@ Questions behind the columns:
 
 **Owner report** (none-found, read 2026-09-30). No site owner report was found in the pages read. Sources: [perplexity-bots].
 
-**Human clicks** (partial, read 2026-09-30). Perplexity is not among the examples Google names for the AI Assistant channel (ChatGPT, Gemini, Deepseek, Copilot, Grok). Whether its referrals land in that channel is not stated. Check your own Referral rows for perplexity.ai. [[CONFIRM: full recognised list is unpublished.]] Sources: [ga4-channels], [measureu-regex].
+**Human clicks** (partial, read 2026-09-30). Perplexity is not among the examples Google names for the AI Assistant channel (ChatGPT, Gemini, Deepseek, Copilot, Grok). Whether its referrals land in that channel is not stated. Check your own Referral rows for perplexity.ai. A second Google page names ChatGPT, Gemini and Claude as examples, so the examples differ between pages. [[CONFIRM: no full list of recognised sources was found on the three Analytics Help pages read.]] Sources: [ga4-channels], [ga4-whats-new], [ga4-traffic-source-dimensions], [measureu-regex].
 
 **Fetchers in logs** (yes, read 2026-09-30). PerplexityBot (search index, not used for training) and Perplexity-User (a user's action; generally ignores robots.txt). IP ranges are published as JSON. Sources: [perplexity-bots].
 
@@ -152,9 +152,11 @@ Questions behind the columns:
 - [anthropic-bots] Does Anthropic crawl data from the web, and how can site owners block the crawler? (Claude Help Center). vendor. Read 2026-09-30. <https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler>
 - [apple-applebot] About Applebot (Apple Support). vendor. Read 2026-09-30. <https://support.apple.com/en-us/119829>
 - [bing-ai-performance] Introducing AI Performance in Bing Webmaster Tools Public Preview (Bing Webmaster Blog). vendor. Published 2026-02-10. Read 2026-09-30. <https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview>
+- [bing-crawlers] Which Crawlers Does Bing Use? (Bing Webmaster Tools help). vendor. Read 2026-09-30. <https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0>
 - [clickport-direct] Why ChatGPT Traffic Shows as Direct in GA4 (Clickport). secondary. Read 2026-09-30. <https://clickport.io/blog/chatgpt-direct-traffic-ga4>
 - [ddg-duckassistbot] What is DuckAssistBot and what does it do? (DuckDuckGo Help). vendor. Read 2026-09-30. <https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot/>
 - [ga4-channels] Default channel group (Analytics Help). vendor. Read 2026-09-30. <https://support.google.com/analytics/answer/9756891>
+- [ga4-traffic-source-dimensions] Traffic-source dimensions, manual tagging, and auto-tagging (Analytics Help). vendor. Read 2026-09-30. <https://support.google.com/analytics/answer/11242870>
 - [ga4-whats-new] What's new in Google Analytics, entry on AI Assistant traffic measurement (Analytics Help). vendor. Published 2026-05-13. Read 2026-09-30. <https://support.google.com/analytics/answer/9164320>
 - [google-common-crawlers] Google's common crawlers, including Google-Extended (Search Central). vendor. Read 2026-09-30. <https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers>
 - [google-crawlers-overview] Overview of Google crawlers and fetchers (Search Central). vendor. Read 2026-09-30. <https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers>

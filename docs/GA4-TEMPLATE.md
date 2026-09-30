@@ -2,7 +2,7 @@
 
 Generated from the data files by `npm run docs`. The hosts come from `data/referrers.json`.
 
-GA4 has a native AI Assistant channel since 2026-05-13. It covers only what Google recognises, the full list was not published when this was read on 2026-09-30, and it cannot see a visit that arrives without a referrer. This template does three jobs the native channel does not: it lists exactly which hosts it matches, it puts a labelled "suspicious direct" view beside the identified traffic, and it can be checked against the native channel row by row.
+GA4 has a native AI Assistant channel since 2026-05-13. It covers only what Google recognises, no full list of recognised sources was found on the Analytics Help pages read on 2026-09-30, and it cannot see a visit that arrives without a referrer. This template does three jobs the native channel does not: it lists exactly which hosts it matches, it puts a labelled "suspicious direct" view beside the identified traffic, and it can be checked against the native channel row by row.
 
 ## 1. The host regex
 
@@ -22,7 +22,7 @@ GA4 custom channel group for AI referrers
 4. Drag the new channel above Referral. GA4 evaluates channels top to bottom and stops at the first match.
 5. Save. The group applies to reports from the day it is created; it does not rewrite history.
 
-Why this when GA4 has a native AI Assistant channel: the native list is Google's and was not published in full on 2026-09-30, and Perplexity is not among the examples Google names. A listed-hosts channel shows you exactly what is in it. Compare the two in Traffic acquisition before you trust either.
+Why this when GA4 has a native AI Assistant channel: the native list is Google's and no full list was found on the Analytics Help pages read on 2026-09-30, and Perplexity is not among the examples Google names. A listed-hosts channel shows you exactly what is in it. Compare the two in Traffic acquisition before you trust either.
 
 Suspicious direct, in Explore (a method, not a measurement)
 1. Explore > Free form > Segments > New segment > Session segment.
@@ -47,7 +47,7 @@ CASE
 END
 ```
 
-Not pasted into a live report by the author. [[CONFIRM: field names match your connector; some connectors name the landing page field "Landing page + query string".]]
+Not pasted into a live report by the author. Google's Data API schema, read on 2026-09-30, names two fields: "Landing page" (the path of the first pageview in a session) and "Landing page + query string". The formula uses the first because its regex matches a bare path. In the GA4 report UI, read on 2026-09-30, the default channel group lists an "AI Assistant" channel and the session dimension is labelled "Session primary channel group (Default channel group)". [[CONFIRM: the Looker Studio field names "Session default channel group", "Session source", "Session medium" and "Landing page" match your connector. The Explore dimension picker was not opened to check.]]
 
 ## 4. BigQuery
 

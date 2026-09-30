@@ -71,8 +71,8 @@ Every cell carries a read date, and `stale` lists the ones older than a limit. T
 - It does not estimate how many AI visits are hidden in Direct. The suspicious-direct view is a filter, and bookmarks, email links and app links pass it too. There is no error bar because there is no ground truth.
 - It cannot see AI answers that mention you without a link, or citations that nobody clicks. Search Console's report counts impressions of cited URLs only, and Bing's counts citations.
 - `none-found` means nothing turned up in the pages read on the read date. It is not proof that a vendor has no report or no crawler.
-- Several cells rest on a third party or a single test, and are marked `unverified`. Open questions are written as `[[CONFIRM: ...]]` in the data and docs, for example how Copilot clicks are referred and what GA4's full AI Assistant list contains.
-- OpenAI's own ads pages returned an access block on 2026-09-30, so the ads note relies on trade press quoting OpenAI. It says so.
+- Several cells rest on a third party or a single test, and are marked `unverified`. Open questions are written as `[[CONFIRM: ...]]` in the data and docs, for example how Copilot clicks are referred and what GA4's full AI Assistant list contains. Microsoft's own pages read on 2026-09-30 did not state the Copilot referrer, and no full GA4 list was found on the Analytics Help pages read.
+- OpenAI's own ads pages returned an access block to an automated fetch on 2026-09-30. They were then read in a real browser the same day, and the ads note cites them. One item, the carousel of ad cards, still rests on trade press and is marked.
 - The Looker Studio formula and the BigQuery SQL were written against the documented field names and have not been run against a live account. Check them on a known month before trusting them.
 - Vendors change these features monthly. Treat any cell older than two months as a prompt to re-read the source.
 - It covers ChatGPT ads only. Other vendors' ad programmes were not read.

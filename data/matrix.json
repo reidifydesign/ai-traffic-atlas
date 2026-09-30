@@ -79,14 +79,14 @@
         },
         "click_referrer": {
           "status": "partial",
-          "text": "GA4's AI Assistant channel names Copilot. A third party says some Copilot traffic arrives through bing.com and looks like ordinary search. [[CONFIRM: no Microsoft page read on how Copilot clicks are referred.]]",
-          "sources": ["ga4-channels", "measureu-regex"],
+          "text": "GA4's AI Assistant channel names Copilot. A third party says some Copilot traffic arrives through bing.com and looks like ordinary search. Microsoft's AI Performance announcement and its crawler help page, both read on this date, do not say how Copilot clicks are referred. [[CONFIRM: no Microsoft page read states the referrer of a Copilot click.]]",
+          "sources": ["ga4-channels", "measureu-regex", "bing-ai-performance", "bing-crawlers"],
           "read": "2026-09-30"
         },
         "bots": {
           "status": "unverified",
-          "text": "In one site's test, a Copilot fetch arrived as a plain Chrome browser and could not be told from a human. [[CONFIRM: Microsoft's own crawler documentation was not readable on the read date.]]",
-          "sources": ["surfacedby-probe"],
+          "text": "Microsoft's crawler help page lists Bingbot, AdIdxBot, BingPreview, MicrosoftPreview and BingVideoPreview, and lists no separate Copilot user agent. In one site's test, a Copilot fetch arrived as a plain Chrome browser and could not be told from a human. [[CONFIRM: whether Copilot's live fetches use any of Microsoft's listed agents. The test covers one site and Microsoft's page does not say.]]",
+          "sources": ["bing-crawlers", "surfacedby-probe"],
           "read": "2026-09-30"
         },
         "controls": {
@@ -109,8 +109,8 @@
         },
         "click_referrer": {
           "status": "partial",
-          "text": "Perplexity is not among the examples Google names for the AI Assistant channel (ChatGPT, Gemini, Deepseek, Copilot, Grok). Whether its referrals land in that channel is not stated. Check your own Referral rows for perplexity.ai. [[CONFIRM: full recognised list is unpublished.]]",
-          "sources": ["ga4-channels", "measureu-regex"],
+          "text": "Perplexity is not among the examples Google names for the AI Assistant channel (ChatGPT, Gemini, Deepseek, Copilot, Grok). Whether its referrals land in that channel is not stated. Check your own Referral rows for perplexity.ai. A second Google page names ChatGPT, Gemini and Claude as examples, so the examples differ between pages. [[CONFIRM: no full list of recognised sources was found on the three Analytics Help pages read.]]",
+          "sources": ["ga4-channels", "ga4-whats-new", "ga4-traffic-source-dimensions", "measureu-regex"],
           "read": "2026-09-30"
         },
         "bots": {
