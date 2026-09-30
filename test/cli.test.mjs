@@ -88,9 +88,7 @@ test('bots can be filtered by role', () => {
   assert.doesNotMatch(r.stdout, /GPTBot /);
 });
 
-const read = (f) => fs.readFileSync(path.join(ROOT, 'docs', f), 'utf8').replace(/
-/g, '
-');
+const read = (f) => fs.readFileSync(path.join(ROOT, 'docs', f), 'utf8').replace(/\r\n/g, '\n');
 
 test('committed docs are in sync with the data files', () => {
   assert.equal(read('MATRIX.md'), renderMarkdown(), 'run npm run docs');
