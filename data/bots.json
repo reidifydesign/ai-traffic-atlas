@@ -1,0 +1,28 @@
+{
+  "_note": "User-agent tokens documented by the vendor, with the job each one does. role: training, search-index, user-fetch (a person's request triggered it), answer-fetch (live fetch for an answer), ads-check, mixed. Applebot-Extended and Google-Extended are robots.txt tokens only and never appear in logs, so they are not listed.",
+  "bots": [
+    { "token": "GPTBot", "vendor": "OpenAI", "role": "training", "sources": ["openai-bots"] },
+    { "token": "OAI-SearchBot", "vendor": "OpenAI", "role": "search-index", "sources": ["openai-bots"] },
+    { "token": "ChatGPT-User", "vendor": "OpenAI", "role": "user-fetch", "sources": ["openai-bots"] },
+    { "token": "OAI-AdsBot", "vendor": "OpenAI", "role": "ads-check", "sources": ["openai-bots"] },
+    { "token": "ClaudeBot", "vendor": "Anthropic", "role": "training", "sources": ["anthropic-bots"] },
+    { "token": "Claude-SearchBot", "vendor": "Anthropic", "role": "search-index", "sources": ["anthropic-bots"] },
+    { "token": "Claude-User", "vendor": "Anthropic", "role": "user-fetch", "sources": ["anthropic-bots"] },
+    { "token": "PerplexityBot", "vendor": "Perplexity", "role": "search-index", "sources": ["perplexity-bots"] },
+    { "token": "Perplexity-User", "vendor": "Perplexity", "role": "user-fetch", "sources": ["perplexity-bots"] },
+    { "token": "Google-Agent", "vendor": "Google", "role": "user-fetch", "sources": ["google-user-triggered"] },
+    { "token": "Google-GeminiNotebook", "vendor": "Google", "role": "user-fetch", "sources": ["google-user-triggered"] },
+    { "token": "Applebot", "vendor": "Apple", "role": "mixed", "sources": ["apple-applebot"] },
+    { "token": "Amazonbot", "vendor": "Amazon", "role": "mixed", "sources": ["amazon-bots"] },
+    { "token": "Amzn-SearchBot", "vendor": "Amazon", "role": "search-index", "sources": ["amazon-bots"] },
+    { "token": "Amzn-User", "vendor": "Amazon", "role": "user-fetch", "sources": ["amazon-bots"] },
+    { "token": "meta-externalagent", "vendor": "Meta", "role": "mixed", "sources": ["meta-crawlers"] },
+    { "token": "meta-webindexer", "vendor": "Meta", "role": "search-index", "sources": ["meta-crawlers"] },
+    { "token": "meta-externalfetcher", "vendor": "Meta", "role": "user-fetch", "sources": ["meta-crawlers"] },
+    { "token": "meta-externalads", "vendor": "Meta", "role": "ads-check", "sources": ["meta-crawlers"] },
+    { "token": "MistralAI-User", "vendor": "Mistral", "role": "user-fetch", "sources": ["mistral-robots"] },
+    { "token": "MistralAI-Index", "vendor": "Mistral", "role": "search-index", "sources": ["mistral-robots"] },
+    { "token": "MistralAI-Training", "vendor": "Mistral", "role": "training", "sources": ["mistral-robots"] },
+    { "token": "DuckAssistBot", "vendor": "DuckDuckGo", "role": "answer-fetch", "sources": ["ddg-duckassistbot"] }
+  ]
+}

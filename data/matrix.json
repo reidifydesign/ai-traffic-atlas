@@ -1,0 +1,371 @@
+{
+  "_note": "Status values: yes = documented by the vendor or clearly shown; partial = exists with a stated gap; none-found = nothing found in the pages read on the read date (absence is not proof); unverified = only a secondary source or a single test. Every cell carries the date it was read. Vendors change these monthly, so run `stale` before you quote a cell.",
+  "columns": [
+    { "id": "owner_report", "label": "Owner report", "question": "Does the vendor give site owners a report about their own site?" },
+    { "id": "click_referrer", "label": "Human clicks", "question": "What does a visit that follows a click from the AI system look like in your analytics?" },
+    { "id": "bots", "label": "Fetchers in logs", "question": "Which fetchers announce themselves in your server logs, and what does each do?" },
+    { "id": "controls", "label": "Owner controls", "question": "What can a site owner switch off or on?" }
+  ],
+  "vendors": [
+    {
+      "id": "google",
+      "name": "Google (AI Overviews, AI Mode, Gemini)",
+      "cells": {
+        "owner_report": {
+          "status": "partial",
+          "text": "Search Console has a Generative AI performance report for Search and Discover: impressions, pages, countries, devices (Search only) and dates. No clicks and no queries. Rolled out to all sites worldwide as of 2026-08-31; a site without enough data may not see it.",
+          "sources": ["google-gsc-blog", "google-gsc-global"],
+          "read": "2026-09-30"
+        },
+        "click_referrer": {
+          "status": "partial",
+          "text": "Clicks from AI Overviews and AI Mode are counted in GA4 Organic Search, not in the AI Assistant channel, so they cannot be split out there. Gemini app clicks fall under the AI Assistant channel, which names Gemini. One site's test saw clickthrough visits arrive from gemini.google.com and google.com.",
+          "sources": ["ga4-channels", "surfacedby-probe"],
+          "read": "2026-09-30"
+        },
+        "bots": {
+          "status": "partial",
+          "text": "No separate fetcher for AI Overviews or AI Mode is documented, so they cannot be told apart from Googlebot in logs. Documented user-triggered fetchers include Google-Agent and Google-GeminiNotebook. In one site's test, a Gemini prompt produced no request from any Google user agent.",
+          "sources": ["google-crawlers-overview", "google-user-triggered", "surfacedby-probe"],
+          "read": "2026-09-30"
+        },
+        "controls": {
+          "status": "yes",
+          "text": "The Google-Extended robots.txt token covers use for Gemini training and for grounding in Gemini Apps, and does not affect Search inclusion. A Search generative AI control (opt out of content appearing in or around AI Overviews and AI Mode) was reported as global on 2026-08-31.",
+          "sources": ["google-common-crawlers", "google-gsc-global"],
+          "read": "2026-09-30"
+        }
+      }
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI (ChatGPT)",
+      "cells": {
+        "owner_report": {
+          "status": "none-found",
+          "text": "No report for site owners about citations of their pages was found. The Ads Manager beta is for advertisers, not for measuring organic citations.",
+          "sources": ["openai-bots", "stackadapt-chatgpt-ads"],
+          "read": "2026-09-30"
+        },
+        "click_referrer": {
+          "status": "partial",
+          "text": "GA4's AI Assistant channel names ChatGPT. A source tag (utm_source=chatgpt.com) is documented by OpenAI per a secondary source, and travels when the referrer is hidden. In that source's April 2026 sample of its own customers, 35.7 percent of recognised AI sessions carried a tag but no referrer. That sample is not a general rate.",
+          "sources": ["ga4-channels", "clickport-direct"],
+          "read": "2026-09-30"
+        },
+        "bots": {
+          "status": "yes",
+          "text": "Four documented tokens: OAI-SearchBot (search index), GPTBot (training), ChatGPT-User (a user's action in ChatGPT, robots.txt may not apply), OAI-AdsBot (checks landing pages submitted as ads). IP ranges are published as JSON.",
+          "sources": ["openai-bots"],
+          "read": "2026-09-30"
+        },
+        "controls": {
+          "status": "yes",
+          "text": "OAI-SearchBot and GPTBot are set independently in robots.txt. Blocking OAI-SearchBot keeps the site out of ChatGPT search answers. ChatGPT-User is not used for Search decisions and may ignore robots.txt.",
+          "sources": ["openai-bots"],
+          "read": "2026-09-30"
+        }
+      }
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft (Copilot, Bing)",
+      "cells": {
+        "owner_report": {
+          "status": "partial",
+          "text": "Bing Webmaster Tools AI Performance (public preview since 2026-02-10): total citations, average cited pages per day, a sample of grounding queries, page-level citation counts and a trend. It counts citations, not rank, authority or position inside an answer.",
+          "sources": ["bing-ai-performance"],
+          "read": "2026-09-30"
+        },
+        "click_referrer": {
+          "status": "partial",
+          "text": "GA4's AI Assistant channel names Copilot. A third party says some Copilot traffic arrives through bing.com and looks like ordinary search. [[CONFIRM: no Microsoft page read on how Copilot clicks are referred.]]",
+          "sources": ["ga4-channels", "measureu-regex"],
+          "read": "2026-09-30"
+        },
+        "bots": {
+          "status": "unverified",
+          "text": "In one site's test, a Copilot fetch arrived as a plain Chrome browser and could not be told from a human. [[CONFIRM: Microsoft's own crawler documentation was not readable on the read date.]]",
+          "sources": ["surfacedby-probe"],
+          "read": "2026-09-30"
+        },
+        "controls": {
+          "status": "partial",
+          "text": "Bing says the report respects robots.txt and other supported content owner controls. The specific controls were not listed in the announcement.",
+          "sources": ["bing-ai-performance"],
+          "read": "2026-09-30"
+        }
+      }
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "cells": {
+        "owner_report": {
+          "status": "none-found",
+          "text": "No site owner report was found in the pages read.",
+          "sources": ["perplexity-bots"],
+          "read": "2026-09-30"
+        },
+        "click_referrer": {
+          "status": "partial",
+          "text": "Perplexity is not among the examples Google names for the AI Assistant channel (ChatGPT, Gemini, Deepseek, Copilot, Grok). Whether its referrals land in that channel is not stated. Check your own Referral rows for perplexity.ai. [[CONFIRM: full recognised list is unpublished.]]",
+          "sources": ["ga4-channels", "measureu-regex"],
+          "read": "2026-09-30"
+        },
+        "bots": {
+          "status": "yes",
+          "text": "PerplexityBot (search index, not used for training) and Perplexity-User (a user's action; generally ignores robots.txt). IP ranges are published as JSON.",
+          "sources": ["perplexity-bots"],
+          "read": "2026-09-30"
+        },
+        "controls": {
+          "status": "partial",
+          "text": "PerplexityBot follows robots.txt. Perplexity-User generally does not, because a person asked for the fetch.",
+          "sources": ["perplexity-bots"],
+          "read": "2026-09-30"
+        }
+      }
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic (Claude)",
+      "cells": {
+        "owner_report": {
+          "status": "none-found",
+          "text": "No site owner report was found in the pages read.",
+          "sources": ["anthropic-bots"],
+          "read": "2026-09-30"
+        },
+        "click_referrer": {
+          "status": "partial",
+          "text": "Google's own pages disagree: the What's New entry names Claude as an AI Assistant source, while the channel description page lists ChatGPT, Gemini, Deepseek, Copilot and Grok. Verify in your own Traffic acquisition report.",
+          "sources": ["ga4-whats-new", "ga4-channels"],
+          "read": "2026-09-30"
+        },
+        "bots": {
+          "status": "yes",
+          "text": "Three documented robots: ClaudeBot (training), Claude-SearchBot (search quality) and Claude-User (a user's request). Anthropic publishes the IP ranges it uses. One site's test saw Claude-User read robots.txt before each page fetch.",
+          "sources": ["anthropic-bots", "surfacedby-probe"],
+          "read": "2026-09-30"
+        },
+        "controls": {
+          "status": "yes",
+          "text": "Each robot is set in robots.txt, including Crawl-delay. Anthropic warns that blocking by IP address may not give a reliable opt-out, because it blocks the robots.txt read.",
+          "sources": ["anthropic-bots"],
+          "read": "2026-09-30"
+        }
+      }
+    },
+    {
+      "id": "apple",
+      "name": "Apple (Siri, Spotlight, Apple Intelligence)",
+      "cells": {
+        "owner_report": {
+          "status": "none-found",
+          "text": "No site owner report was found in the page read.",
+          "sources": ["apple-applebot"],
+          "read": "2026-09-30"
+        },
+        "click_referrer": {
+          "status": "none-found",
+          "text": "Nothing found on how clicks from Siri or Spotlight answers appear in analytics.",
+          "sources": ["apple-applebot"],
+          "read": "2026-09-30"
+        },
+        "bots": {
+          "status": "yes",
+          "text": "Applebot identifies itself and can be verified by reverse DNS under applebot.apple.com or a published CIDR list. Its data powers search and may be used to train Apple models. Applebot-Extended is a robots.txt token, not a separate user agent.",
+          "sources": ["apple-applebot"],
+          "read": "2026-09-30"
+        },
+        "controls": {
+          "status": "yes",
+          "text": "Disallow Applebot-Extended to opt out of training. The nosnippet meta tag opts content out of broad-knowledge answers. Neither stops Applebot from crawling for search.",
+          "sources": ["apple-applebot"],
+          "read": "2026-09-30"
+        }
+      }
+    },
+    {
+      "id": "meta",
+      "name": "Meta (Meta AI)",
+      "cells": {
+        "owner_report": {
+          "status": "none-found",
+          "text": "No site owner report was found in the page read.",
+          "sources": ["meta-crawlers"],
+          "read": "2026-09-30"
+        },
+        "click_referrer": {
+          "status": "unverified",
+          "text": "meta.ai appears in a third party's list of AI referral domains. No Meta or Google page was read that confirms how the clicks are classified.",
+          "sources": ["measureu-regex"],
+          "read": "2026-09-30"
+        },
+        "bots": {
+          "status": "yes",
+          "text": "meta-externalagent (training and indexing), meta-webindexer, meta-externalfetcher (fetches a link at a user's request, may bypass robots.txt) and meta-externalads.",
+          "sources": ["meta-crawlers"],
+          "read": "2026-09-30"
+        },
+        "controls": {
+          "status": "partial",
+          "text": "robots.txt, and Meta asks you to allow up to 24 hours for a change to apply. meta-externalfetcher may bypass it.",
+          "sources": ["meta-crawlers"],
+          "read": "2026-09-30"
+        }
+      }
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon (Alexa)",
+      "cells": {
+        "owner_report": {
+          "status": "none-found",
+          "text": "No site owner report was found in the page read.",
+          "sources": ["amazon-bots"],
+          "read": "2026-09-30"
+        },
+        "click_referrer": {
+          "status": "none-found",
+          "text": "Nothing found on how Alexa-linked visits appear in analytics.",
+          "sources": ["amazon-bots"],
+          "read": "2026-09-30"
+        },
+        "bots": {
+          "status": "yes",
+          "text": "Amazonbot (improves products, may train models), Amzn-SearchBot (search, including Alexa; no training) and Amzn-User (live answers for a user; may not follow all robots.txt rules). IP lists are published.",
+          "sources": ["amazon-bots"],
+          "read": "2026-09-30"
+        },
+        "controls": {
+          "status": "yes",
+          "text": "Each agent is set independently in robots.txt, and a change can take about 24 hours. Amzn-User may not follow all directives.",
+          "sources": ["amazon-bots"],
+          "read": "2026-09-30"
+        }
+      }
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral (Vibe)",
+      "cells": {
+        "owner_report": {
+          "status": "none-found",
+          "text": "No site owner report was found in the page read.",
+          "sources": ["mistral-robots"],
+          "read": "2026-09-30"
+        },
+        "click_referrer": {
+          "status": "none-found",
+          "text": "Nothing found on how clicks from Mistral's assistant appear in analytics.",
+          "sources": ["mistral-robots"],
+          "read": "2026-09-30"
+        },
+        "bots": {
+          "status": "yes",
+          "text": "MistralAI-User (a user's action in Vibe), MistralAI-Index (search index, no training) and MistralAI-Training (dataset crawling). IP lists are published.",
+          "sources": ["mistral-robots"],
+          "read": "2026-09-30"
+        },
+        "controls": {
+          "status": "yes",
+          "text": "Each token can be disallowed in robots.txt. MistralAI-User governs which sites user requests can reach.",
+          "sources": ["mistral-robots"],
+          "read": "2026-09-30"
+        }
+      }
+    },
+    {
+      "id": "duckduckgo",
+      "name": "DuckDuckGo (AI-assisted answers)",
+      "cells": {
+        "owner_report": {
+          "status": "none-found",
+          "text": "No site owner report was found in the page read.",
+          "sources": ["ddg-duckassistbot"],
+          "read": "2026-09-30"
+        },
+        "click_referrer": {
+          "status": "none-found",
+          "text": "Nothing found on how clicks from AI-assisted answers appear in analytics.",
+          "sources": ["ddg-duckassistbot"],
+          "read": "2026-09-30"
+        },
+        "bots": {
+          "status": "yes",
+          "text": "DuckAssistBot crawls pages in real time for AI-assisted answers that cite sources, and is not used to train models. IP addresses are listed and also published as JSON.",
+          "sources": ["ddg-duckassistbot"],
+          "read": "2026-09-30"
+        },
+        "controls": {
+          "status": "yes",
+          "text": "Disallow DuckAssistBot in robots.txt; the change takes effect after 72 hours. Search rankings are not affected.",
+          "sources": ["ddg-duckassistbot"],
+          "read": "2026-09-30"
+        }
+      }
+    },
+    {
+      "id": "xai",
+      "name": "xAI (Grok)",
+      "cells": {
+        "owner_report": {
+          "status": "none-found",
+          "text": "No site owner report was found. No xAI crawler documentation was found either. [[CONFIRM: search was not exhaustive.]]",
+          "sources": ["surfacedby-probe"],
+          "read": "2026-09-30"
+        },
+        "click_referrer": {
+          "status": "partial",
+          "text": "GA4's AI Assistant channel names Grok, and grok.com appears in a third party's domain list.",
+          "sources": ["ga4-channels", "measureu-regex"],
+          "read": "2026-09-30"
+        },
+        "bots": {
+          "status": "unverified",
+          "text": "In one site's test, a Grok fetch arrived as an ordinary Safari or Chrome browser and could not be told from a human.",
+          "sources": ["surfacedby-probe"],
+          "read": "2026-09-30"
+        },
+        "controls": {
+          "status": "none-found",
+          "text": "No documented robots.txt token was found.",
+          "sources": ["surfacedby-probe"],
+          "read": "2026-09-30"
+        }
+      }
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "cells": {
+        "owner_report": {
+          "status": "none-found",
+          "text": "No site owner report was found. [[CONFIRM: search was not exhaustive.]]",
+          "sources": ["ga4-channels"],
+          "read": "2026-09-30"
+        },
+        "click_referrer": {
+          "status": "partial",
+          "text": "GA4's AI Assistant channel names Deepseek, and deepseek.com appears in a third party's domain list.",
+          "sources": ["ga4-channels", "measureu-regex"],
+          "read": "2026-09-30"
+        },
+        "bots": {
+          "status": "none-found",
+          "text": "No vendor documentation of a crawler or user agent was found.",
+          "sources": ["ga4-channels"],
+          "read": "2026-09-30"
+        },
+        "controls": {
+          "status": "none-found",
+          "text": "No documented robots.txt token was found.",
+          "sources": ["ga4-channels"],
+          "read": "2026-09-30"
+        }
+      }
+    }
+  ]
+}

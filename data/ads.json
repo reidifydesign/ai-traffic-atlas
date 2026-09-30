@@ -1,0 +1,72 @@
+{
+  "title": "Ads in AI answers: what changes for your reporting",
+  "as_of": "2026-09-30",
+  "scope": "ChatGPT is the only AI answer product with a documented ad programme covered here. Other vendors were not checked. [[CONFIRM: ad programmes at other AI vendors were not read.]]",
+  "primary_source_gap": "OpenAI's own ads pages (ads.openai.com, help.openai.com, openai.com) returned an access block when read on 2026-09-30. Every dated fact below comes from trade press or vendor blogs quoting OpenAI, except the OAI-AdsBot line, which is from OpenAI's bots page. [[CONFIRM: re-read the OpenAI pages in a browser before quoting any row.]]",
+  "timeline": [
+    {
+      "date": "2026-02-09",
+      "fact": "OpenAI announced a test of ads in ChatGPT, starting in the United States, with stated principles of answer independence, conversation privacy, user control and trust.",
+      "sources": ["stackadapt-chatgpt-ads"]
+    },
+    {
+      "date": "2026-05-05",
+      "fact": "Self-serve buying opened. An ad was a card below an answer with advertiser name, favicon, a short headline (about 16 characters), a short description (about 32 characters), an image and a landing page. A carousel of cards followed in August.",
+      "sources": ["ppc-land-sponsored"]
+    },
+    {
+      "date": "2026-07-24",
+      "fact": "Trade press reported AppsFlyer and Adjust integrations for app installs and in-app events from ChatGPT Ads. AppsFlyer's help article carried a July 9 update stamp.",
+      "sources": ["ppc-land-mmp"]
+    },
+    {
+      "date": "2026-09-16",
+      "fact": "OpenAI began testing Sponsored Agents with select advertisers in the United States: after a click, a separate, labelled conversation with an agent sponsored by the advertiser, described as distinct from ChatGPT's independent answers. HubSpot and Shopify became the first CRM and ecommerce integrations. The same post added prompt-driven campaign management.",
+      "sources": ["ppc-land-sponsored"]
+    }
+  ],
+  "reporting_effects": [
+    {
+      "id": "paid-vs-organic-clicks",
+      "claim": "Paid and organic clicks from ChatGPT may both arrive looking like chatgpt.com traffic, so the AI Assistant channel in GA4 can mix them unless the ad URL carries its own tags.",
+      "basis": "inference",
+      "note": "One source says the click reference OpenAI adds to ad landing URLs is called oppref, and that UTMs on the ad URL should work when the product preserves them. [[CONFIRM: whether ad clicks carry utm_source or only oppref, and what GA4 does with each.]]",
+      "sources": ["hardal-measure-ads"],
+      "action": "Put your own utm_medium on every ad URL (for example paid-ai) so paid clicks can be filtered out of organic AI referral counts, and keep query strings intact through redirects."
+    },
+    {
+      "id": "ads-bot-in-logs",
+      "claim": "OAI-AdsBot visits landing pages you submit as ads to check policy and relevance. Those requests are not organic citation activity and are not a person reading the page.",
+      "basis": "documented",
+      "sources": ["openai-bots"],
+      "action": "Count OAI-AdsBot separately from OAI-SearchBot and ChatGPT-User. The logs command does."
+    },
+    {
+      "id": "organic-citations-unchanged-by-design",
+      "claim": "OpenAI's stated principle is that the answer is generated independently and ads do not change it. This is a stated design rule, not something a site owner can verify from analytics.",
+      "basis": "vendor statement as reported",
+      "sources": ["stackadapt-chatgpt-ads", "ppc-land-sponsored"],
+      "action": "Do not read a change in organic ChatGPT referrals as caused or not caused by ads. There is no control group in your data."
+    },
+    {
+      "id": "sponsored-agent-blind-spot",
+      "claim": "A Sponsored Agent conversation happens in a separate thread, and what the advertiser receives from it was not stated in the coverage read.",
+      "basis": "gap",
+      "note": "[[CONFIRM: what data the advertiser receives from a Sponsored Agent conversation, how it is priced, and how the eventual site visit is referred.]]",
+      "sources": ["ppc-land-sponsored"],
+      "action": "If you run one, treat the visit that follows as a new session with unknown prior context and tag the destination URL."
+    },
+    {
+      "id": "app-and-crm-measurement",
+      "claim": "App advertisers can attribute installs through AppsFlyer and Adjust, and HubSpot users get automatic UTM tagging per HubSpot partners quoted in trade press. Neither helps a site owner who does not advertise.",
+      "basis": "secondary",
+      "sources": ["ppc-land-mmp", "ppc-land-sponsored"],
+      "action": "None needed if you do not buy ads. If you do, reconcile the ads platform's conversions with GA4 and expect them to differ."
+    }
+  ],
+  "what_not_to_conclude": [
+    "That buying an ad changes whether you are cited in answers. The stated rule says it does not.",
+    "That ChatGPT referral traffic in GA4 is all organic once ads exist in your market.",
+    "That any figure about ad revenue or ad reach is a site owner measurement. A reported annual revenue run rate is a company figure and says nothing about your site."
+  ]
+}

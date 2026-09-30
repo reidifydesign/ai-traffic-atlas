@@ -1,0 +1,171 @@
+{
+  "_note": "Every claim in the matrix points at one of these. kind: vendor = the vendor's own page, secondary = a third party reporting or testing. Read dates are when this repo's author read the page.",
+  "google-gsc-blog": {
+    "title": "Introducing Search Generative AI performance reports in Search Console (Google Search Central Blog)",
+    "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+    "published": "2026-06-03",
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "google-gsc-global": {
+    "title": "Global: Google Search Console AI Performance Report & AI Control (Search Engine Roundtable)",
+    "url": "https://seroundtable.com/google-search-console-generative-ai-tools-live-41984.html",
+    "published": "2026-09-01",
+    "read": "2026-09-30",
+    "kind": "secondary"
+  },
+  "ga4-whats-new": {
+    "title": "What's new in Google Analytics, entry on AI Assistant traffic measurement (Analytics Help)",
+    "url": "https://support.google.com/analytics/answer/9164320",
+    "published": "2026-05-13",
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "ga4-channels": {
+    "title": "Default channel group (Analytics Help)",
+    "url": "https://support.google.com/analytics/answer/9756891",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "sej-ga4-ai-channel": {
+    "title": "Google Analytics Adds AI Assistant As Default Channel Group (Search Engine Journal)",
+    "url": "https://www.searchenginejournal.com/google-analytics-adds-ai-assistant-as-default-channel-group/574974/",
+    "published": "2026-05-14",
+    "read": "2026-09-30",
+    "kind": "secondary"
+  },
+  "bing-ai-performance": {
+    "title": "Introducing AI Performance in Bing Webmaster Tools Public Preview (Bing Webmaster Blog)",
+    "url": "https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview",
+    "published": "2026-02-10",
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "google-crawlers-overview": {
+    "title": "Overview of Google crawlers and fetchers (Search Central)",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "google-common-crawlers": {
+    "title": "Google's common crawlers, including Google-Extended (Search Central)",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "google-user-triggered": {
+    "title": "List of Google user-triggered fetchers (Search Central)",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/google-user-triggered-fetchers",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "openai-bots": {
+    "title": "Overview of OpenAI crawlers (OpenAI platform docs)",
+    "url": "https://platform.openai.com/docs/bots",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "perplexity-bots": {
+    "title": "Perplexity crawlers (Perplexity docs)",
+    "url": "https://docs.perplexity.ai/guides/bots",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "anthropic-bots": {
+    "title": "Does Anthropic crawl data from the web, and how can site owners block the crawler? (Claude Help Center)",
+    "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "apple-applebot": {
+    "title": "About Applebot (Apple Support)",
+    "url": "https://support.apple.com/en-us/119829",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "meta-crawlers": {
+    "title": "Meta web crawlers (Meta for Developers)",
+    "url": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "amazon-bots": {
+    "title": "About Amazonbot (Amazon Developer)",
+    "url": "https://developer.amazon.com/amazonbot",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "mistral-robots": {
+    "title": "Mistral crawlers (Mistral docs)",
+    "url": "https://docs.mistral.ai/robots",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "ddg-duckassistbot": {
+    "title": "What is DuckAssistBot and what does it do? (DuckDuckGo Help)",
+    "url": "https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot/",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "vendor"
+  },
+  "surfacedby-probe": {
+    "title": "nginx logs: AI traffic vs referral traffic (SurfacedBy, a one-site probe)",
+    "url": "https://surfacedby.com/blog/nginx-logs-ai-traffic-vs-referral-traffic",
+    "published": "2026-04-19",
+    "read": "2026-09-30",
+    "kind": "secondary"
+  },
+  "clickport-direct": {
+    "title": "Why ChatGPT Traffic Shows as Direct in GA4 (Clickport)",
+    "url": "https://clickport.io/blog/chatgpt-direct-traffic-ga4",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "secondary"
+  },
+  "measureu-regex": {
+    "title": "AI channel grouping guide (MeasureU, lists the domains its formula covers)",
+    "url": "https://measureu.com/resources/ai-channel-grouping/",
+    "published": null,
+    "read": "2026-09-30",
+    "kind": "secondary"
+  },
+  "ppc-land-sponsored": {
+    "title": "OpenAI lets advertisers run ChatGPT ads from HubSpot and Shopify (PPC Land)",
+    "url": "https://ppc.land/openai-lets-advertisers-run-chatgpt-ads-from-hubspot-and-shopify/",
+    "published": "2026-09-16",
+    "read": "2026-09-30",
+    "kind": "secondary"
+  },
+  "ppc-land-mmp": {
+    "title": "ChatGPT Ads gains app attribution in 7 markets as AppsFlyer, Adjust go live (PPC Land)",
+    "url": "https://ppc.land/chatgpt-ads-gains-app-attribution-in-7-markets-as-appsflyer-adjust-go-live/",
+    "published": "2026-07-24",
+    "read": "2026-09-30",
+    "kind": "secondary"
+  },
+  "stackadapt-chatgpt-ads": {
+    "title": "Everything you need to know about advertising on ChatGPT right now (StackAdapt)",
+    "url": "https://www.stackadapt.com/resources/blog/how-to-advertise-on-chatgpt",
+    "published": "2026-05-28",
+    "read": "2026-09-30",
+    "kind": "secondary"
+  },
+  "hardal-measure-ads": {
+    "title": "How to Measure ChatGPT Ads (Hardal)",
+    "url": "https://usehardal.com/blog/how-to-measure-chatgpt-ads",
+    "published": "2026-08-20",
+    "read": "2026-09-30",
+    "kind": "secondary"
+  }
+}

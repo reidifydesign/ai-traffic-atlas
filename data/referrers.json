@@ -1,0 +1,13 @@
+{
+  "_note": "Hostnames used to recognise a human click that came from an AI system. A host matches itself and any subdomain. Only hosts backed by a source are listed; add your own with --extra-referrers. google.com is left out on purpose: it also carries ordinary search.",
+  "referrers": [
+    { "host": "chatgpt.com", "vendor": "OpenAI", "sources": ["ga4-channels", "measureu-regex"] },
+    { "host": "claude.ai", "vendor": "Anthropic", "sources": ["measureu-regex", "ga4-whats-new"] },
+    { "host": "perplexity.ai", "vendor": "Perplexity", "sources": ["measureu-regex"] },
+    { "host": "gemini.google.com", "vendor": "Google", "sources": ["measureu-regex", "surfacedby-probe"] },
+    { "host": "copilot.microsoft.com", "vendor": "Microsoft", "sources": ["measureu-regex"] },
+    { "host": "deepseek.com", "vendor": "DeepSeek", "sources": ["measureu-regex", "ga4-channels"] },
+    { "host": "grok.com", "vendor": "xAI", "sources": ["measureu-regex", "ga4-channels"] },
+    { "host": "meta.ai", "vendor": "Meta", "sources": ["measureu-regex"] }
+  ]
+}

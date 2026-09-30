@@ -1,0 +1,42 @@
+{
+  "name": "ai-traffic-atlas",
+  "version": "0.1.0",
+  "description": "A dated matrix of what each AI system shows a site owner, with the gaps stated and a GA4 template for the traffic you can see.",
+  "type": "module",
+  "bin": {
+    "ai-traffic-atlas": "bin/ai-traffic-atlas.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "data",
+    "docs",
+    "examples"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "docs": "node bin/ai-traffic-atlas.mjs docs",
+    "validate": "node bin/ai-traffic-atlas.mjs validate"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ga4",
+    "ai-traffic",
+    "chatgpt",
+    "referral",
+    "analytics",
+    "aeo",
+    "search-console",
+    "bing-webmaster-tools",
+    "robots-txt"
+  ],
+  "license": "MIT",
+  "author": "Rish Sadh (https://github.com/rishsadh)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reidifydesign/ai-traffic-atlas.git"
+  },
+  "homepage": "https://github.com/reidifydesign/ai-traffic-atlas#readme"
+}
