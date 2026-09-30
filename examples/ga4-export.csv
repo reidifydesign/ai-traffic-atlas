@@ -1,0 +1,20 @@
+# SYNTHETIC EXAMPLE DATA. These rows were written for the demo and are not from any real site.
+# Format matches a GA4 Explore free-form export with Session source / medium, Landing page, Sessions and New users.
+# ----------------------------------------
+Session source / medium,Landing page,Sessions,New users
+google / organic,/,120,90
+google / organic,/blog/measuring-ai-traffic,64,55
+(direct) / (none),/,48,10
+(direct) / (none),/blog/measuring-ai-traffic,14,13
+(direct) / (none),/services/aeo,9,8
+(direct) / (none),/contact,7,2
+(direct) / (none),/blog/what-is-aeo,6,6
+(direct) / (none),/login,5,1
+chatgpt.com / referral,/blog/measuring-ai-traffic,11,10
+chatgpt.com / ai-assistant,/services/aeo,8,7
+claude.ai / referral,/blog/what-is-aeo,3,3
+perplexity.ai / referral,/blog/measuring-ai-traffic,4,4
+gemini.google.com / referral,/services/aeo,2,2
+bing / organic,/,12,9
+linkedin.com / referral,/blog/what-is-aeo,15,14
+newsletter / email,/blog/measuring-ai-traffic,10,4

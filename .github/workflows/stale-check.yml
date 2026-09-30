@@ -1,0 +1,20 @@
+name: stale-check
+
+# Disabled until launch. To turn on, uncomment the schedule below.
+# It fails the run when any matrix cell was last read more than 60 days ago,
+# which is the prompt to re-read the vendor pages and update data/matrix.json.
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "0 6 1 * *"
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node bin/ai-traffic-atlas.mjs validate
+      - run: node bin/ai-traffic-atlas.mjs stale --days 60
