@@ -23,6 +23,21 @@ A session is **suspicious direct** when all of these hold:
 
 The reasoning: a person who types your name goes to the home page, and a returning visitor is not discovering you. A new visitor who lands deep inside an article or service page with no source is someone a link sent. The link could be from an AI answer, an email, a chat app or a PDF.
 
+## A worked example on synthetic data
+
+The rows below are synthetic. They are the direct rows of [examples/ga4-export.csv](../examples/ga4-export.csv), which was written for the demo and is not from any real site. No figure in this repo comes from a real site's analytics.
+
+| Landing page | Direct sessions | From new users | Suspicious direct? |
+| --- | --- | --- | --- |
+| `/` | 48 | 10 | No, the home page |
+| `/blog/measuring-ai-traffic` | 14 | 13 | Yes, 93 percent new |
+| `/services/aeo` | 9 | 8 | Yes, 89 percent new |
+| `/contact` | 7 | 2 | No, 29 percent new |
+| `/blog/what-is-aeo` | 6 | 6 | Yes, 100 percent new |
+| `/login` | 5 | 1 | No, 20 percent new |
+
+With the default settings, 29 of these 89 direct sessions are suspicious direct (32.6 percent). That is a statement about this made-up table. It does not say 29 visits came from AI, and the percentage is not an estimate of anything.
+
 ## What you can say from it
 
 - "N direct sessions landed on pages people rarely type in and came from new users." This is a fact about your data.
