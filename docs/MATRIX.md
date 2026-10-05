@@ -60,7 +60,7 @@ Questions behind the columns:
 
 **Owner report** (none-found, read 2026-09-30). No site owner report was found in the pages read. Sources: [perplexity-bots].
 
-**Human clicks** (partial, read 2026-09-30). Perplexity is not among the examples Google names for the AI Assistant channel (ChatGPT, Gemini, Deepseek, Copilot, Grok). Whether its referrals land in that channel is not stated. Check your own Referral rows for perplexity.ai. A second Google page names ChatGPT, Gemini and Claude as examples, so the examples differ between pages. [[CONFIRM: no full list of recognised sources was found on the three Analytics Help pages read.]] Sources: [ga4-channels], [ga4-whats-new], [ga4-traffic-source-dimensions], [measureu-regex].
+**Human clicks** (partial, read 2026-09-30). Perplexity is not among the examples Google names for the AI Assistant channel (ChatGPT, Gemini, Deepseek, Copilot, Grok). Whether its referrals land in that channel is not stated. Check your own Referral rows for perplexity.ai. The What's New entry gives ChatGPT, Gemini and Claude as examples of popular AI assistants, so the two pages give different examples. Neither publishes the full list the channel matches. No full list of recognised sources is on any of the three Analytics Help pages read, re-read on 2026-10-05. Sources: [ga4-channels], [ga4-whats-new], [ga4-traffic-source-dimensions], [measureu-regex].
 
 **Fetchers in logs** (yes, read 2026-09-30). PerplexityBot (search index, not used for training) and Perplexity-User (a user's action; generally ignores robots.txt). IP ranges are published as JSON. Sources: [perplexity-bots].
 
@@ -70,7 +70,7 @@ Questions behind the columns:
 
 **Owner report** (none-found, read 2026-09-30). No site owner report was found in the pages read. Sources: [anthropic-bots].
 
-**Human clicks** (partial, read 2026-09-30). Google's own pages disagree: the What's New entry names Claude as an AI Assistant source, while the channel description page lists ChatGPT, Gemini, Deepseek, Copilot and Grok. Verify in your own Traffic acquisition report. Sources: [ga4-whats-new], [ga4-channels].
+**Human clicks** (partial, read 2026-09-30). The What's New entry gives ChatGPT, Gemini and Claude as examples of popular AI assistants in the AI Assistant channel. The channel description page gives ChatGPT, Gemini, Deepseek, Copilot and Grok as examples of sources "like" those and does not name Claude. Both are example lists, and the pages say the channel matches "a list of AI Assistants" without publishing it (all three pages re-read 2026-10-05). Whether Claude traffic lands in the channel is not stated outright. Verify in your own Traffic acquisition report. Sources: [ga4-whats-new], [ga4-channels].
 
 **Fetchers in logs** (yes, read 2026-09-30). Three documented robots: ClaudeBot (training), Claude-SearchBot (search quality) and Claude-User (a user's request). Anthropic publishes the IP ranges it uses. One site's test saw Claude-User read robots.txt before each page fetch. Sources: [anthropic-bots], [surfacedby-probe].
 

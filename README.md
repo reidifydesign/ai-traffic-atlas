@@ -10,9 +10,11 @@ npx github:reidifydesign/ai-traffic-atlas matrix
 
 Needs Node 18 or later. No dependencies. Everything runs on your machine and reads local files.
 
+Disclosure: Reidify, the studio behind this, sells AEO services. This is published as data with its method, not as a pitch.
+
 ## Why this exists
 
-On 2026-09-30 the ways to see AI traffic had changed three times in eight months, and the pages that describe them disagree. Bing Webmaster Tools added an AI Performance report on 2026-02-10. GA4 added a native AI Assistant channel on 2026-05-13. Google added Generative AI reports to Search Console on 2026-06-03 and finished the worldwide rollout on 2026-08-31. Older articles still say GA4 has no AI channel, and one publisher notes that about its own earlier version. Google's own help pages disagree about whether Claude is in the GA4 channel.
+On 2026-09-30 the ways to see AI traffic had changed three times in eight months, and the pages that describe them disagree. Bing Webmaster Tools added an AI Performance report on 2026-02-10. GA4 added a native AI Assistant channel on 2026-05-13. Google added Generative AI reports to Search Console on 2026-06-03 and finished the worldwide rollout on 2026-08-31. Older articles still say GA4 has no AI channel, and one publisher notes that about its own earlier version. Google's help pages give different examples for the GA4 channel: one names Claude, another lists five other assistants. Neither publishes the full list, and none is on the three Analytics Help pages read on 2026-09-30 and again on 2026-10-05.
 
 This repo puts those facts in one place, one cell per vendor and question, each with a source URL and the date it was read. Where a vendor shows a site owner nothing, the cell says `none-found` instead of staying blank. It also carries a GA4 and Looker Studio template for the traffic that can be identified, and a labelled "suspicious direct" view for the part that cannot.
 
